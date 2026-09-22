@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+          content="Rama Eldi — Creative Web Developer & Informatics Student. Personal portfolio showcasing web development, UI/UX and digital experiences." />
+
+    <meta name="author"
+          content="Rama Eldi" />
+
+    <meta name="theme-color"
+          content="#090909" />
+
+    <meta name="robots"
+          content="index, follow" />
+
+    <title>@ViewData["Title"] — Rama Eldi</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet" />
+
+
+    <!-- =====================================================
+         MAIN CSS
+         ===================================================== -->
+
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         PREMIUM NAVBAR
+         ===================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-inner">
+
+            <!-- LOGO -->
+
+            <a href="#home"
+               class="nav-logo"
+               aria-label="Rama Eldi Home">
+                RE.
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav class="nav-menu"
+                 aria-label="Primary navigation">
+
+                <a href="#home">
+                    HOME
+                </a>
+
+                <a href="#about">
+                    ABOUT
+                </a>
+
+                <a href="#skills">
+                    SKILLS
+                </a>
+
+                <a href="#projects">
+                    PROJECTS
+                </a>
+
+                <a href="#journey">
+                    EXPERIENCE
+                </a>
+
+                <a href="#contact">
+                    CONTACT
+                </a>
+
+            </nav>
+
+
+            <!-- CONTACT BUTTON -->
+
+            <a href="#contact"
+               class="nav-contact">
+
+                <span>
+                    LET'S TALK
+                </span>
+
+                <span class="nav-contact-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button type="button"
+                    id="menuToggle"
+                    class="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false">
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MOBILE MENU
+         ===================================================== -->
+
+    <div id="mobileMenu"
+         class="mobile-menu">
+
+        <div class="mobile-menu-inner">
+
+
+            <!-- MOBILE META -->
+
+            <div class="mobile-menu-meta">
+
+                <span>
+                    RAMA ELDI
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+
+
+            <!-- MOBILE LINKS -->
+
+            <nav class="mobile-menu-links"
+                 aria-label="Mobile navigation">
+
+                <a href="#home"
+                   data-menu-link>
+
+                    <span>
+                        01
+                    </span>
+
+                    HOME
+
+                </a>
+
+
+                <a href="#about"
+                   data-menu-link>
+
+                    <span>
+                        02
+                    </span>
+
+                    ABOUT
+
+                </a>
+
+
+                <a href="#skills"
+                   data-menu-link>
+
+                    <span>
+                        03
+                    </span>
+
+                    SKILLS
+
+                </a>
+
+
+                <a href="#projects"
+                   data-menu-link>
+
+                    <span>
+                        04
+                    </span>
+
+                    PROJECTS
+
+                </a>
+
+
+                <a href="#journey"
+                   data-menu-link>
+
+                    <span>
+                        05
+                    </span>
+
+                    EXPERIENCE
+
+                </a>
+
+
+                <a href="#contact"
+                   data-menu-link>
+
+                    <span>
+                        06
+                    </span>
+
+                    CONTACT
+
+                </a>
+
+            </nav>
+
+
+
+            <!-- MOBILE FOOTER -->
+
+            <div class="mobile-menu-bottom">
+
+                <span>
+                    CREATIVE / WEB DEVELOPER
+                </span>
+
+                <span>
+                    INDONESIA
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main role="main">
+
+        @RenderBody()
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-left">
+                © 2026 RAMA ELDI
+            </div>
+
+            <div class="footer-center">
+                CREATIVE WEB DEVELOPER
+            </div>
+
+            <div class="footer-right">
+                YOGYAKARTA · INDONESIA
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+
+    @await RenderSectionAsync(
+    "Scripts",
+        required: false
+        )
+
+</body>
+
+</html>
